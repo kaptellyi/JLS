@@ -1,0 +1,62 @@
+.ic.i-see-more {
+  background-image: svg-load('eye.svg');
+}
+
+.ic.i-filter {
+  background-image: svg-load('filter.svg');
+}
+
+.ic.i-filter-pointer {
+  position: absolute;
+  background: white;
+  border: 2px solid theme('colors.pink.400');
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ic.i-filter-pointer::before {
+  content: 'i';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: black;
+  -webkit-text-stroke: 0;
+}
+
+.ic.i-currency {
+  background-image: svg-load('dollar.svg');
+}
+
+.ic.i-city {
+  background-image: svg-load('building.svg');
+}
+
+.ic.i-period {
+  background-image: svg-load('calendar.svg');
+}
+
+.ic.i-scroll-up {
+  background-image: svg-load('scroll-btn-up.svg');
+}
+
+.ic.i-scroll-down{
+  background-image: svg-load('scroll-btn-down.svg');
+}
+
+@media (min-width: theme('screens.xl')) {
+  .ic.i-scroll-up {
+    background-image: svg-load('scroll-btn-up-lg.svg');
+  }
+  
+  .ic.i-scroll-down{
+    background-image: svg-load('scroll-btn-down-lg.svg');
+  }
+}
+
+.ic-close {
+  background-image: svg-load('close.svg');
+}

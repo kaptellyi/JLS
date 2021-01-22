@@ -1,0 +1,50 @@
+/* Wave */
+svg.wave {
+  background-image: svg-load('wave.svg');
+}
+
+@media (min-width: theme('screens.md')) {
+  svg.wave {
+    background-image: svg-load('wave-md.svg');
+  }
+}
+
+@media (min-width: theme('screens.xl')) {
+  svg.wave {
+    background-image: svg-load('wave-lg.svg');
+  }
+}
+
+/* Promo Illustration */
+svg.promo-sun {
+  height: 100%;
+  width: 100%;
+}
+
+.promo-sun #promo-bg, #sticky-promo-sun.arrived  #promo-bg {
+  fill: #FF9FC7;
+}
+
+.promo-sun #promo-wave, #sticky-promo-sun.arrived #promo-wave {
+  fill: #FF82B6;
+}
+
+/* Sticky Promo Sun */
+#sticky-promo-sun {
+  position: sticky;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+}
+
+#sticky-promo-sun ellipse, #sticky-promo-sun path {
+  transition: all .3s ease-in-out;
+}
+
+#sticky-promo-sun #promo-bg {
+  fill: #E42929;
+}
+
+#sticky-promo-sun #promo-wave {
+  fill: #DB0000;
+}

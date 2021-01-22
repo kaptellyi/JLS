@@ -1,0 +1,78 @@
+@import './popup-card.css';
+
+.card {
+  box-shadow: 0px 2px 20px rgba(254, 170, 205, 0.5);
+}
+
+.card_large-card {
+  display: grid;
+  grid-template-rows: 25% 75%;
+}
+
+.card_large-card .card__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card.active {
+  pointer-events: all;
+}
+
+.card__header {
+  box-shadow: 0px 2px 20px rgba(254, 170, 205, 0.5);
+  background-image: url('@img/card-bg.webp');
+}
+
+.card__header .teacher {
+  top: 100%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.card__description {
+  height: 50%;
+}
+
+.card.expanded .card__description {
+  height: 0px;
+}
+
+/* Review */
+.review {
+  background-color: white;
+  height: 50%;
+}
+
+.card.expanded .review {
+  height: 100%;
+}
+
+.review-top {
+  background: rgba(254, 170, 205, 0.3);
+}
+
+.review-teacher {
+  background-color: #ffd7e7;
+  border-radius: 2rem;
+}
+
+.review__top .avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+/* Expand Button */
+i.expand-btn {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  margin-top: .2em;
+  margin-left: .2em;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+  background-image: svg-load('expand.svg');
+}
+
+.card.expanded i.expand-btn {
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,16 @@
+.promo-btn button,
+.promo-btn span {
+  border-radius: 15px;
+  border: 7px solid #FF9FC7;
+}
+
+.promo-btn span {
+  position: absolute;
+  display: block;
+  background-color: #FF9FC7;
+  color: #FF9FC7;
+}
+
+.promo-text > div > :not(:first-child) {
+  position: absolute;
+}

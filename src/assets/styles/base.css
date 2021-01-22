@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@900&display=swap');
+
+:root {
+  font-size: 16px;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6
+p, span, small {
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+i, svg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

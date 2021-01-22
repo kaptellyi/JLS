@@ -1,0 +1,124 @@
+svg.wave {
+  width: 100%;
+  height:  75%; 
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* Promo */
+.promo-page_course-introduction .promo {
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: theme('screens.xl')) {
+  .promo-page_course-introduction .promo {
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+/* Promo Info */
+.promo-page_course-introduction .promo__info {
+  top: 15%;
+}
+
+
+@media (min-width: 321px) {
+  .promo-page_course-introduction .promo__info {
+    top: 25%;
+  }
+}
+
+@media (min-width: theme('screens.md')) {
+  .promo-page_course-introduction .promo__info {
+    top: 10%;
+  }
+}
+
+@media (min-width: theme('screens.md')) and (min-height: 1336px) {
+  .promo-page_course-introduction .promo__info {
+    top: 25%;
+  }
+}
+
+@media (min-width: theme('screens.xl')) {
+  .promo-page_course-introduction .promo__info {
+    top: 0;
+  }
+}
+
+@media (min-width: theme('screens.xl')) {
+  .promo-page_course-introduction .promo__info {
+    top: 0;
+  }
+}
+
+/* Promo Illustration */
+.promo-page_course-introduction .promo__illustration {
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  position: relative;
+  z-index: -1;
+} 
+
+@media (min-width: theme('screens.xl')) {
+  .promo-page_course-introduction .promo__illustration {
+    height: 100%;
+  }
+}
+
+/* School */
+.promo__illustration .school {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  background-image: svg-load('school.svg');
+}
+
+@media (min-width: theme('screens.xl')) {
+  .promo__illustration .school {
+    left: 15%;
+    bottom: 10%;
+  }
+}
+
+/* Promo Button */
+.promo-page_course-introduction .promo-btn {
+  position: relative;
+  left: 35%;
+  top: 5%;
+  z-index: 1;
+}
+
+@media (min-width: 360px) and (min-height: 568px) {
+  .promo-page_course-introduction .promo-btn {
+    top: 10%;
+    left: 47%;
+  }
+}
+
+@media (min-width: theme('screens.md')) {
+  .promo-page_course-introduction .promo-btn {
+    left: 52%;
+    top: 5%;
+  }
+}
+
+@media (min-width: theme('screens.xl')) {
+  .promo-page_course-introduction .promo-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: unset;
+    left: unset;
+  }
+}

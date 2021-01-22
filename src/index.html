@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Japanese language school">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" media="print" onload="this.media='all';">
+    <title>JLS</title>
+  </head>
+  <body style="opacity: 0;">
+     <div class="page start-page flex justify-center items-center bg-no-repeat bg-cover bg-center h-screen w-screen">
+        <div class="hero-wrapper w-full h-full max-h-0 overflow-hidden" data-max="40%">
+          <div class="hero wrapper-border w-full h-full relative  bg-cover bg-center bg-no-repeat bg-mediumWhite xl:bg-transparent">
+          </div>
+          <h1
+              class="hero-text w-full text-center absolute centered text-3xl md:text-6xl font-bold text-pink-400 t-stroke-1 t-stroke-black opacity-0"
+            >
+            一緒に勉強しましょう
+          </h1>
+        </div>
+
+      <template id="petals">
+        <img
+          class="petals h-full absolute"
+          src="../src/assets/img/petals-1.webp"
+          alt="petals 1"
+        />
+        <img
+          class="petals h-full absolute"
+          src="../src/assets/img/petals-2.webp"
+          alt="petals 2"
+        />
+      </template>
+
+      <div id="start-btn" class="absolute h-20 w-20 md:h-32 md:w-32 lg:h-24 lg:w-24 bottom-5 opacity-0 flex flex-col justify-center items-center">
+        <i class="start-btn__arrow"></i>
+        <i class="start-btn__arrow"></i>
+      </div>
+    </div>
+
+    <div class="page courses-page relative h-auto w-screen">
+      <div class="courses-wrapper bottom-0 flex flex-col xl:flex-row">
+
+      </div>
+    </div>
+
+    <div class="page cards-page w-screen h-screen relative">
+    </div> 
+
+   <div class="parallax-pages relative">
+    <template id="promo-sun-temp">
+      <svg class="promo-sun" viewBox="0 0 579 546" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="circle">
+          <ellipse id="promo-bg" cx="289.5" cy="273" rx="289.5" ry="273" fill=""/>
+          <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="579" height="546">
+          <ellipse id="mask" cx="289.5" cy="273" rx="289.5" ry="273" fill="#EA9BBC"/>
+          </mask >
+          <g mask="url(#mask0)">
+            <path id="promo-wave" d="M353 374.5C236 395.5 136.5 260 60 244.5L-31 219L-71 292.5L7.5 580C128.5 577.167 506.6 553.1 613 509.5C746 455 470 353.5 353 374.5Z" fill=""/>
+          </g>
+        </g>
+      </svg>
+    </template>
+
+    <div class="page promo-page map-page w-screen h-screen relative">
+      <template id="marker-el-temp">
+        <i class="g-marker"></i>
+      </template>
+      <div id="map-container"></div>
+    </div> 
+
+    <div class="page promo-page promo-page_course-introduction w-screen h-screen relative overflow-hidden">
+      <svg class="wave bg-no-repeat bg-cover xl:opacity-0"></svg>  
+
+      <div class="promo absolute h-10/12 w-full xl:flex xl:w-11/12 xl:h-3/5 xl:centered justify-center">
+        <div class="promo__illustration absolute xl:relative xl:opacity-0">
+          <svg class="promo-sun" viewBox="0 0 579 546" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="circle">
+              <ellipse id="promo-bg" cx="289.5" cy="273" rx="289.5" ry="273" fill=""/>
+              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="579" height="546">
+              <ellipse id="mask" cx="289.5" cy="273" rx="289.5" ry="273" fill="#EA9BBC"/>
+              </mask >
+              <g mask="url(#mask0)">
+                <path id="promo-wave" d="M353 374.5C236 395.5 136.5 260 60 244.5L-31 219L-71 292.5L7.5 580C128.5 577.167 506.6 553.1 613 509.5C746 455 470 353.5 353 374.5Z" fill=""/>
+              </g>
+            </g>
+          </svg>
+          <svg class="promo-illustration__secondary school xl:transform xl:-translate-x-full" data-move-from="-999px"></svg>
+        </div>
+
+        <div class="promo__info h-full w-full absolute xl:relative xl:transform  xl:translate-x-full" data-move-from="999px"> 
+          <div class="promo-text w-full px-1 xl:text-right">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page promo-page promo-page_contact w-screen h-screen relative overflow-hidden">
+      <template id="contact-modal-temp">
+        <div class="contact-modal w-10/12 md:w-8/12 p-6 centered flex flex-col xl:flex-row bg-white">
+          <i class="ic-close ic-xs"></i>
+          <div class="contact-modal__anim w-full xl:w-1/2">
+            <video autoplay loop muted playsinline>
+              <source src="./contact-modal-anim.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="contact-modal__text w-full xl:w-1/2">
+            <div class="contact-modal__gratitude text-center">
+              <h4 class="font-bold text-xl md:text-3xl">Thank you for choosing us</h4>
+              <h5 class="font-bold text-lg md:text-2xl">We will contact you soon!</h5>
+            </div>
+            <hr class="my-4" />
+            <div class="contact-modal__quote mb-6">
+              <h4 class="contact-modal-quote text-base md:text-xl"></h4>
+              <small class="contact-modal-author text-sm md:text-lg block absolute right-0 pr-6 font-bold"></small>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <svg class="wave bg-no-repeat bg-cover xl:opacity-0"></svg>  
+
+      <div class="promo absolute h-10/12 flex flex-col w-full xl:flex-row xl:w-11/12 xl:h-3/5">
+
+        <div class="promo__info h-auto w-full px-4 md:px-8 xl:px-0 pb-4 relative xl:absolute xl:left-0 xl:transform xl:-translate-x-full" data-move-from="-999px"> 
+          <div class="promo-text w-full px-11 leading-11 text-right xl:text-left">
+          </div>
+        </div>
+
+        <div class="promo__contact h-full w-full relative xl:transform xl:translate-x-full" data-move-from="999px">
+          <div class="promo__illustration xl:opacity-0">
+            <svg class="promo-sun" viewBox="0 0 579 546" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="circle">
+                <ellipse id="promo-bg" cx="289.5" cy="273" rx="289.5" ry="273" fill=""/>
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="579" height="546">
+                <ellipse id="mask" cx="289.5" cy="273" rx="289.5" ry="273" fill="#EA9BBC"/>
+                </mask >
+                <g mask="url(#mask0)">
+                  <path id="promo-wave" d="M353 374.5C236 395.5 136.5 260 60 244.5L-31 219L-71 292.5L7.5 580C128.5 577.167 506.6 553.1 613 509.5C746 455 470 353.5 353 374.5Z" fill=""/>
+                </g>
+              </g>
+            </svg>
+            <svg class="promo-illustration__secondary connection"></svg>
+          </div>
+            
+          <div class="promo__contact-info absolute">
+            <div class="promo__links mb-1 inline-block relative">
+              <div class="promo__link cursor-pointer flex items-center" data-url="https://www.facebook.com/">
+                <i class="facebook h-5 w-5 md:h-10 md:w-10"></i>
+                <span class="mx-1 text-gray-800 text-base ml-1 md:ml-2 md:text-2xl font-semibold" >sakuranohana</span>
+              </div>
+              <div class="promo__link cursor-pointer flex items-center"  data-url="https://www.youtube.com/">
+                <i class="youtube h-5 w-5 md:h-10 md:w-10"></i>
+                <span class="mx-1 text-gray-800 text-base ml-1 md:ml-2 md:text-2xl font-semibold">sakuranohana</span>
+              </div>
+            </div>
+
+            <form class="promo__contact-form w-full h-full flex flex-col">
+              <input type="text" id="phone-submit" class="relative text-base md:text-4xl w-10/12 font-extrabold text-gray-800 outline-none bg-transparent">
+              <div class="countries-wrapper w-full"></div>
+            </form>
+          </div>
+        </div>
+    </div>
+   </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+#popup-card {
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: card-appear .4s ease-in-out;
+}
+
+@keyframes card-appear {
+  0% {
+    transform: translate(-50%, -1000px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}

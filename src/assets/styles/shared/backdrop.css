@@ -1,0 +1,17 @@
+.backdrop.active {
+  animation: backdrop-appear .2s ease-in-out;
+}
+
+.backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes backdrop-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

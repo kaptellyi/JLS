@@ -1,0 +1,76 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+  @responsive {
+    .d-none {
+      display: none;
+    }
+
+    .ic {
+      @apply h-16 w-16;
+    }
+
+    .ic-xs {
+      @apply h-4 w-4;
+    }
+
+    .ic-sm {
+      @apply h-8 w-8;
+    }
+    
+    .ic-md {
+      @apply h-20 w-20;
+    }
+    
+    .ic-lg {
+      @apply h-24 w-24;
+    }
+    
+    .ic-xl {
+      @apply h-32 w-32;
+    }
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .x-centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .y-centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .t-stroke-black {
+    -webkit-text-stroke-color: black;
+  }
+
+  .t-stroke-pink {
+    -webkit-text-stroke-color: #FEAACD;
+  }
+
+  .t-stroke-1 {
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .t-stroke-2 {
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .text-centered p::first-line {
+    text-align: center;
+  }
+}

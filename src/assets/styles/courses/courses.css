@@ -1,0 +1,45 @@
+.course.active .course-bg {
+  filter: blur(2px);
+}
+
+.course.active .scroll-btns {
+  display: none;
+}
+
+.course:nth-child(1) .course-bg {
+  background-image: url('@img/short-course-bg.webp');
+}
+
+.course:nth-child(2) .course-bg {
+  background-image: url('@img/long-course-bg.webp');
+}
+
+.course:nth-child(3) .course-bg {
+  background-image: url('@img/evening-course-bg.webp');
+}
+
+.course.active .course-name  {
+  @apply text-3xl;
+}
+
+@media (min-width: theme('screens.md')) {
+  .course.active .course-name  {
+    @apply text-5xl;
+  }
+}
+
+@media (min-width: theme('screens.xl')) {
+  .course:hover .course__info, .course.filter-active .course__info {
+    opacity: 1;
+  }
+
+  .course:hover .course-bg, .course.filter-active .course-bg {
+    filter: blur(2px);
+  }
+
+  .course:hover .course-name, .course.filter-active .course-name {
+    top: 0;
+    transform: translate(-50%, 0);
+    @apply text-4xl;
+  }
+}

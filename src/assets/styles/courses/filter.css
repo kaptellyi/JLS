@@ -1,0 +1,26 @@
+.filter__input-form.active .filter-title,
+.filter__input-form[data-autocomplete] .filter-title {
+  @apply transform -translate-y-6 text-lg;
+}
+
+@media (min-width: theme('screens.md')) {
+  .filter__input-form.active .filter-title,
+  .filter__input-form[data-autocomplete] .filter-title {
+    @apply transform -translate-y-10 text-3xl;
+  }
+}
+
+@media (min-width: theme('screens.xl')) {
+  .filter__input-form.active .filter-title,
+  .filter__input-form[data-autocomplete] .filter-title {
+    @apply text-xl -translate-y-6;
+  }
+}
+
+.filter__input-form.active::before {
+  content: attr(data-autocomplete);
+  font-size: inherit;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+}
