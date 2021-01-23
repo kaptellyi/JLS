@@ -1,7 +1,7 @@
 # Filter properties
 ## **[Currency](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html)**
 ___
-## **City**
+## **Period**
 - Two weeks
 - Month
 - Two months
@@ -10,7 +10,7 @@ ___
 - One year
 - Two years
 ___
-## **Period**
+## **City**
 - Tokyo
 - Kyoto
 - Nagoya
