@@ -2,3 +2,7 @@ node_modules
 .vscode
 .eslintrc.json
 stats.json
+build
+.firebase
+.firebaserc
+firebase.json

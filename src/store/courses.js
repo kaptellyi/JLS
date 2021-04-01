@@ -126,10 +126,15 @@ const getNewPrice = (config, defPrice) => {
 
 const convertMoney = async (money, currency) => {
   if (getDefaultConfig().currency === currency) return money;
-  const result = await fetch('https://api.exchangeratesapi.io/latest');
+  const result = await fetch(
+    // 'https://api.exchangeratesapi.io/v1/latest?access_key=c6d20c863cfc928b915fa75fdf987257&format=1'
+    'https://v6.exchangerate-api.com/v6/01624665d0907ef38e7f61f7/latest/USD'
+  );
   const response = await result.json();
-  const { rates } = response;
-  return rates[currency] ? money * rates[currency] : money;
+  const { conversion_rates } = response;
+  return conversion_rates[currency]
+    ? money * conversion_rates[currency]
+    : money;
 };
 
 const updateCourses = (cb, oldCourses, newCourse) => {

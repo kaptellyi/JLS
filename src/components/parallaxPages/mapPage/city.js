@@ -13,7 +13,7 @@ const cityMapComp = city => {
 };
 
 const cityComp = (map, city) => {
-  const cityEl = document.createElement('div');
+  const cityEl = document.createElement('article');
   cityEl.id = `${city.id}`;
   cityEl.className =
     'city font-bold text-lg h-full w-full flex flex-col cursor-pointer';

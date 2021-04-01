@@ -25,10 +25,13 @@ export const EVENING = 'EVENING';
 // Types objects
 const currencyTypes = {};
 const setCurrencyTypes = async () => {
-  const result = await fetch('https://api.exchangeratesapi.io/latest');
+  const result = await fetch(
+    // 'https://api.exchangeratesapi.io/v1/latest?access_key=c6d20c863cfc928b915fa75fdf987257&format=1'
+    'https://v6.exchangerate-api.com/v6/01624665d0907ef38e7f61f7/latest/USD'
+  );
   const response = await result.json();
-  const { rates } = response;
-  Object.keys(rates).forEach(rate => (currencyTypes[rate] = rate));
+  const { conversion_rates } = response;
+  Object.keys(conversion_rates).forEach(rate => (currencyTypes[rate] = rate));
 };
 setCurrencyTypes();
 

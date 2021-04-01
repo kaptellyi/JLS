@@ -38,7 +38,7 @@ const plugins = () => {
             __dirname,
             'src/assets/vids/contact-modal-anim.webm'
           ),
-          to: path.resolve(__dirname, 'dist'),
+          to: path.resolve(__dirname, 'build'),
         },
       ],
     }),
@@ -62,7 +62,7 @@ module.exports = {
 
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
   },
 
   resolve: {

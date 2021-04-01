@@ -1,0 +1,3 @@
+.promo-text > header > :not(:first-child) {
+  position: absolute;
+}

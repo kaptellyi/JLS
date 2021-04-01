@@ -8,14 +8,14 @@ import backdrop from '../UI/backdrop';
 
 // Components
 const filterFieldComp = (key, course) => {
-  const fieldEl = document.createElement('div');
+  const fieldEl = document.createElement('article');
   fieldEl.className = 'filter__field w-full flex justify-center items-end';
   fieldEl.innerHTML = `
     <i class="ic ic-sm md:ic xl:ic-sm i-${key}"></i>
-    <div class="filter__input-form ml-1 lowercase relative text-xl md:text-4xl xl:text-2xl">
+    <article class="filter__input-form ml-1 lowercase relative text-xl md:text-4xl xl:text-2xl">
       <h4 class="filter-title absolute bottom-0 capitalize font-bold text-pink-400 text-xl md:text-4xl xl:text-2xl transition-all duration-200 ease-out t-stroke-1 t-stroke-black">${key}</h4>
       <input class="outline-none lowercase border-b-2 border-black text-xl md:text-4xl xl:text-2xl  text-black" type="text" />
-    </div>
+    </article>
   `;
 
   const inputEl = fieldEl.querySelector('input');

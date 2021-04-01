@@ -16,11 +16,11 @@ const rowFieldComp = (title, description, payload) => {
   const descText = Array.isArray(description.text)
     ? description.text.join(', ')
     : description.text;
-  const rowFieldEl = document.createElement('div');
+  const rowFieldEl = document.createElement('article');
   rowFieldEl.className = 'row-field relative leading-10';
 
   rowFieldEl.innerHTML = `
-    <span class="title float-left  ${title.className}">${titleText}: </span>
+    <h4 class="title float-left  ${title.className}">${titleText}: </h4>
     <p class="description inline ${description.className}">${descText}</p>
   `;
 

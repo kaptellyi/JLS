@@ -44,7 +44,7 @@ const courseNavComp = course => {
 };
 
 const courseInfoComp = course => {
-  const courseInfoEl = document.createElement('div');
+  const courseInfoEl = document.createElement('section');
   courseInfoEl.className = 'course__info w-11/12 pt-20 md:pt-32 opacity-0';
 
   const titleClass =
@@ -82,11 +82,15 @@ const courseInfoComp = course => {
 };
 
 const courseBodyComp = course => {
-  const courseBodyEl = document.createElement('div');
+  const courseBodyEl = document.createElement('section');
   courseBodyEl.className =
     'course__body relative h-full w-full flex justify-center';
 
-  courseBodyEl.innerHTML = `<h2 class="course-name absolute centered text-4xl md:text-6xl lg:text-5xl text-pink-400 font-bold t-stroke-1 t-stroke-black text-center">${course.courseName}</h2>`;
+  courseBodyEl.innerHTML = `
+    <header class="course-name absolute centered text-4xl md:text-6xl lg:text-5xl text-pink-400 font-bold t-stroke-1 t-stroke-black text-center">
+      <h2>${course.courseName}</h2>
+    </header>
+  `;
   courseBodyEl.append(courseInfoComp(course));
 
   return courseBodyEl;
@@ -98,7 +102,7 @@ const courseComp = course => {
   courseEl.className = 'course relative h-screen w-full';
   if (course.active) courseEl.classList.add('active');
   courseEl.innerHTML =
-    '<div class="course-bg h-full w-full bg-cover bg-center bg-no-repeat absolute"></div>';
+    '<article class="course-bg h-full w-full bg-cover bg-center bg-no-repeat absolute"></article>';
 
   if (mobileRes) {
     courseEl.append(courseNavComp(course));

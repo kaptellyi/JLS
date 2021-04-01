@@ -4,3 +4,4 @@ import './backdrop.css';
 import './carousel.css';
 import './flag.css';
 import './promo-btn.css';
+import './promo-text.css';

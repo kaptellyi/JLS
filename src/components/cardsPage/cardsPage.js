@@ -78,7 +78,7 @@ const editComment = (comment, isOverflowed, toExpand) => {
 
 // Components
 const cardPreviewComp = card => {
-  const cardPreviewEl = document.createElement('div');
+  const cardPreviewEl = document.createElement('section');
   cardPreviewEl.className =
     'card__preview text-right font-bold absolute right-0 m-1';
   cardPreviewEl.innerHTML = `
@@ -93,7 +93,7 @@ const cardPreviewComp = card => {
 
 // Header
 const cardHeaderComp = (card, withPreview) => {
-  const cardHeaderEl = document.createElement('div');
+  const cardHeaderEl = document.createElement('section');
   cardHeaderEl.className =
     'card__header relative h-full w-full bg-cover bg-no-repeat bg-center';
 
@@ -113,7 +113,7 @@ const cardHeaderComp = (card, withPreview) => {
 
 // Body
 const cardDescComp = card => {
-  const cardDescriptionEl = document.createElement('div');
+  const cardDescriptionEl = document.createElement('section');
   cardDescriptionEl.className =
     'card__description px-2 overflow-hidden transition-all duration-300';
 
@@ -135,25 +135,25 @@ const cardDescComp = card => {
 };
 
 const cardReviewComp = card => {
-  const cardReviewEl = document.createElement('div');
+  const cardReviewEl = document.createElement('section');
   const { initial, adjusted } = card.review.comment;
   const comment = adjusted
     ? editComment(adjusted, true, true)
     : editComment(initial, false, false);
   cardReviewEl.className = 'review card__review w-full flex flex-col bg-white';
   cardReviewEl.innerHTML = `
-    <div class="review__top wrapper-border p-4 mt-1 w-full flex justify-center">
-      <div class="review-teacher w-48 h-12 shadow-lg flex items-center">
+    <section class="review__top wrapper-border p-4 mt-1 w-full flex justify-center">
+      <section class="review-teacher w-48 h-12 shadow-lg flex items-center">
         <img class="avatar object-cover rounded-full border-3 border-pink-400 shadow-lg"></img>
         <h4 class="review-author capitalize font-bold text-xl ml-1">${card.review.author}</h4>
-      </div>
-    </div>
+      </section>
+    </section>
 
-    <div class="review__body text-centered h-full relative py-2 px-2 overflow-hidden flex justify-center items-center">
+    <section class="review__body text-centered h-full relative py-2 px-2 overflow-hidden flex justify-center items-center">
       <i class="absolute top-0 left-0 ml-1 text-3xl text-pink-400 font-bold t-stroke-1 t-stroke-black">“</i>
       <p class="review-comment w-full h-full relative text-md font-bold text-justify">${comment}</p>
       <i class="absolute top-0 right-0 mr-1 text-3xl text-pink-400 font-bold t-stroke-1 t-stroke-black">“</i>
-    </div>
+    </section>
   `;
 
   const { default: imgPath } = studentImages.find(tImg =>
@@ -165,7 +165,7 @@ const cardReviewComp = card => {
 };
 
 const cardBodyComp = card => {
-  const cardBodyEl = document.createElement('div');
+  const cardBodyEl = document.createElement('section');
   cardBodyEl.className = `card__body h-full pt-10 transition-all duration-300 ease-in-out`;
   cardBodyEl.append(cardDescComp(card));
   const cardReviewEl = cardReviewComp(card);
@@ -176,7 +176,7 @@ const cardBodyComp = card => {
 
 // Card
 const cardComp = (card, index = 0, isPopup) => {
-  const cardEl = document.createElement('div');
+  const cardEl = document.createElement('article');
   const translate = shift =>
     mobResolution
       ? `translateY(-${shift * index}em)`

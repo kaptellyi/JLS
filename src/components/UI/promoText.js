@@ -5,7 +5,7 @@ const addStyles = (el, stylesObj) => {
 };
 
 const styleTextClones = (clones, styles, shift) => {
-  const textWrapper = document.createElement('div');
+  const textWrapper = document.createElement('header');
   textWrapper.className = 'relative w-full h-auto';
   clones.forEach((el, i) => {
     const { mainNode, cloneStyles } = styles;
